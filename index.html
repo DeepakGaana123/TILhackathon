@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title></title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/blog-post.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+ 
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4" id = "title"></h1>
+
+      
+
+        <hr>
+
+    
+
+        <!-- Post Content -->
+        
+       
+
+        <p id = "para1"></p>
+
+        <p id = "para2"></p>
+
+        <hr>
+
+      
+
+        <div class="container">
+          <canvas id="myChart1"></canvas>
+      </div>
+
+
+      <div class="container">
+        <canvas id="myChart2"></canvas>
+    </div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+
+  <script>
+
+   let myUrl = "data.txt";
+   function Get(myUrl){
+        var Httpreq = new XMLHttpRequest(); // a new request
+        Httpreq.open("GET",myUrl,false);
+        Httpreq.send(null);
+        return Httpreq.responseText;          
+    }
+    
+
+   var dataJSON = JSON.parse(Get(myUrl));
+
+
+   var title = document.getElementById("title");
+
+    title.textContent += dataJSON.title; 
+
+   
+
+    var para1 = document.getElementById("para1");
+
+    para1.textContent += dataJSON.para1; 
+    
+
+    var para2 = document.getElementById("para2");
+
+   para2.textContent += dataJSON.para2;
+ 
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+         let dataChart1 = document.getElementById("myChart1").getContext('2d');
+         let dataChart2 = document.getElementById("myChart2").getContext('2d');
+
+
+        
+
+         let chart1 = new Chart(dataChart1, {
+             type: 'horizontalBar', // bar, horizonal bar, pie , line , dougnut , radar
+             data: {
+                 labels: dataJSON.chart_one_label,
+                 datasets:[{
+                     label: dataJSON.chart_one_title,
+                     data: dataJSON.chart_one_data,
+                     backgroundColor : 'pink'
+                 }],
+              
+             },
+             
+             options:{}
+         });
+    
+         let chart2 = new Chart(dataChart2, {
+             type: 'bar', // bar, horizonal bar, pie , line , dougnut , radar
+             data: {
+                 labels: dataJSON.chart_two_label,
+                 datasets:[{
+                     label: dataJSON.chart_two_title,
+                     data: dataJSON.chart_two_data,
+                     backgroundColor : 'pink'
+                 }],
+              
+             },
+             
+             options:{}
+         });
+    
+     </script>
+
+
+</body>
+
+</html>

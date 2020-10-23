@@ -1,0 +1,18 @@
+{
+  "title": "Title",
+  "para1" : "This is paragraph 1",
+  "para2" : "This is paragraph 2",
+  
+  "chart_one_label" : ["one", "two", "three","one", "two", "three","one", "two", "three"
+    ],
+  
+  "chart_one_title" : "Chart one title",
+  "chart_one_data" : [10, 20, 30, 10, 20, 30, 10, 20, 30
+    ],
+  
+  "chart_two_label" : ["one", "two", "three","one", "two", "three","one", "two", "three"
+    ],
+  "chart_two_title" : "Chart two title",
+  "chart_two_data" : [10, 20, 30, 10, 20, 30, 10, 20, 30
+    ] 
+}
