@@ -1,18 +1,51 @@
 {
-  "title": "Title",
-  "para1" : "This is paragraph 1",
-  "para2" : "This is paragraph 2",
-  
-  "chart_one_label" : ["one", "two", "three","one", "two", "three","one", "two", "three"
-    ],
-  
-  "chart_one_title" : "Chart one title",
-  "chart_one_data" : [10, 20, 30, 10, 20, 30, 10, 20, 30
-    ],
-  
-  "chart_two_label" : ["one", "two", "three","one", "two", "three","one", "two", "three"
-    ],
-  "chart_two_title" : "Chart two title",
-  "chart_two_data" : [10, 20, 30, 10, 20, 30, 10, 20, 30
-    ] 
+  "title": "Air quality improves in Delhi, may improve from Moderate to Satisfactory category by Tuesday. ",
+  "para1": "Air quality of the Delhi region is improving slowly because of improving weather conditions and decrease in number of vehicles on road. \nPM has been the major contributor in pollution for the last 30 days in Delhi. \nOther major pollution contributers are CO, O and PM10. ",
+  "para2": "31 August was the most cleanest day in Delhi since 01 July with AQI of 41. \n03 October was the most polluted day in Delhi since 01 July with AQI of 189 with high concentration of PM, PM, O102.53. \nIn Delhi, Most of the time air quality was in Satisfactory range since 01 July. ",
+  "chart_one_label": [
+    "Good",
+    "Satisfactory",
+    "Moderate",
+    "Poor"
+  ],
+  "chart_one_title": "No. of days",
+  "chart_one_data": [
+    4,
+    60,
+    34,
+    0
+  ],
+  "chart_two_label": [
+    "22/09",
+    "23/09",
+    "24/09",
+    "25/09",
+    "26/09",
+    "27/09",
+    "28/09",
+    "29/09",
+    "30/09",
+    "01/10",
+    "02/10",
+    "03/10",
+    "04/10",
+    "05/10"
+  ],
+  "chart_two_title": "Air Quality Index",
+  "chart_two_data": [
+    115,
+    76,
+    104,
+    134,
+    165,
+    117,
+    159,
+    177,
+    156,
+    152,
+    180,
+    189,
+    184,
+    179
+  ]
 }
